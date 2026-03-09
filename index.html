@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 2rem;
+        }
+
+        header p {
+            color: #666;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #007BFF;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        #about p {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Skills Section */
+        #skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            gap: 15px;
+        }
+
+        #skills li {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        #skills li:hover {
+            background-color: #0056b3;
+        }
+
+        /* Experience & Projects */
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 5px;
+            color: #007BFF;
+        }
+
+        .card span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .card p {
+            margin-top: 10px;
+        }
+
+        /* Contact Section */
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #contact input, #contact textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        #contact button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #contact button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            #skills ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://via.placeholder.com/120" alt="Profile Photo">
+        <h1>John Doe</h1>
+        <p>Full Stack Developer | Designer | Tech Enthusiast</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate developer with experience in building web applications and modern solutions.
+            I love creating beautiful, functional, and user-friendly websites and applications.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="card">
+            <h3>Frontend Developer</h3>
+            <span>Company ABC | Jan 2022 - Present</span>
+            <p>Developed responsive web applications using React, improved performance, and collaborated with designers.</p>
+        </div>
+        <div class="card">
+            <h3>Intern Developer</h3>
+            <span>Startup XYZ | Jun 2021 - Dec 2021</span>
+            <p>Assisted in building features for web platforms and gained hands-on experience in full-stack development.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <span>Personal Project</span>
+            <p>Designed and developed this portfolio website to showcase skills and projects. <a href="#">View Project</a></p>
+        </div>
+        <div class="card">
+            <h3>Task Manager App</h3>
+            <span>Web App</span>
+            <p>A task management application built with React and Node.js. <a href="#">View Project</a></p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2026 John Doe. All rights reserved.
+    </footer>
+
+</body>
+</html>
